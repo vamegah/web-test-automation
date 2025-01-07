@@ -1,0 +1,4 @@
+com\vamega\pages\BasePage.class
+resources\commonLibs\implementations\ElementControl.class
+resources\commonLibs\implementations\CommonDriver.class
+com\vamega\pages\LoginPageObject.class

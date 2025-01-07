@@ -2,6 +2,7 @@ package resources.commonLibs.implementations;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CommonDriver {
@@ -31,15 +32,10 @@ public class CommonDriver {
 		}
 		else if (browserType.equalsIgnoreCase("firefox")) {
 			
-			System.setProperty("webdriver.chrome.driver",
+			System.setProperty("webdriver.firefox.driver",
 					currentWorkingDir + "/drivers/firefoxdriver.exe");
 			driver = new ChromeDriver();
 			
-		}
-		else if (browserType.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.chrome.driver",
-					currentWorkingDir + "/drivers/firefoxdriver.exe");
-			driver = new ChromeDriver();
 		}
 		else {
 			throw new Exception("Invalid driver type" + browserType);
@@ -57,6 +53,11 @@ public class CommonDriver {
 		driver.get(url);
 		
 	}
+	
+	public void closeAllBrowser() {
+		
+		driver.quit();
+	}
 
 	public WebDriver getDriver() {
 		return driver;
@@ -68,6 +69,12 @@ public class CommonDriver {
 
 	public void setElementDetectionTimeout(int elementDetectionTimeout) {
 		this.elementDetectionTimeout = elementDetectionTimeout;
+	}
+	
+	public String getPageTitle() {
+		
+		return driver.getTitle();
+		
 	}
 	
 	
