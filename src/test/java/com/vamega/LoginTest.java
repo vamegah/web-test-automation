@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
 		
 		loginPageObject.loginToApplication(username, password);
 		
-		String expectedTitle = "GTPL Bank Manage HomePage";
+		String expectedTitle = "GTPL Bank Manager HomePage";
 		
 		String actualTitle = commonDriver.getPageTitle();
 		

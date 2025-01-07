@@ -40,5 +40,11 @@ public class ReportUtils {
 		extentReports.flush();
 		
 	}
+	
+	public void attachScreenshotToReport(String filename) {
+		
+		extentTest.addScreenCaptureFromPath(filename);
+		
+	}
 
 }

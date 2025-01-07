@@ -83,6 +83,8 @@ public class BaseTest {
 			
 			screenshot.captureAndSaveScreenshot(screenshotFilename);
 			
+			reportUtils.attachScreenshotToReport(screenshotFilename);
+			
 		}
 	}
 	
